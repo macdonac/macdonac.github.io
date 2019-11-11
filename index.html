@@ -7,22 +7,46 @@
     <script>src="js/bootstrap.min.js"</script>
 </head>
 <body>
-    <div class="jumbotron text-center">
-        <h1>My First Bootstrap Page</h1>
-    </div>
+   
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Weather for Jocks</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <h1>hey</h1>
-    <table>
-        <tr>
-            <th id="weather">1</th>
-            <th>2</th>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>b</td>
-        </tr>
-    </table>
-    <footer>saget ice designs</footer>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">How to Rain Dance <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Local Singles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Too much Rain?</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CSGO CHEATS</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>You want the weather eh m8y?</h1>
+        <p class="lead">All right stop. Collaborate and listen.<br> Ice is back with my brand new invention.</p>
+      </div>
 </body>
 </html>
 
