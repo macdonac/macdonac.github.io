@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 
 function fetchWeather(zip) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${zip},us&APPID=f9940e48694b3fdded1e8d7c56ca3c17`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${zip},us&units=imperial&APPID=f9940e48694b3fdded1e8d7c56ca3c17`)
         .then(response => response.json())
         .then(data => {            
             weatherParser(data)
