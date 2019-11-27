@@ -130,18 +130,11 @@ span{
 }
 
 .container{
-	max-width: 550px;
-	height: 50vh;
-	border: 1px solid black;
-	margin: 0 auto;
-	display: grid;
-	grid-template-rows: 10% 90%;
-	text-align: center;
-	padding: 25px 5px;
-	margin-left: 2rem;
-	background-repeat: no-repeat;
-	backgronud-position: center;
-	background-size:cover;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
