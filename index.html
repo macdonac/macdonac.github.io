@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <script>src="js/bootstrap.min.js"</script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-	<script src="Script1.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="knockout-3.5.1.js"></script>
+    <script src="Script1.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
 </head>
-<body>
  <body class="text-center">
 
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
@@ -34,7 +37,7 @@
 		<div class="middle">
 		  <i class="fa fa-sun"></i>
 		  <div class="degrees">
-		   <h1 id="temp">69</h1>
+		   <h1 id="temp" <span data-bind="text: temp"></span></h1>
 		   <span>&#176;</span>
 		  </div>
 		  <h3 id="desc">Sunny</h3>
@@ -47,7 +50,7 @@
       </footer>
     </div>
 </body>
+
+
 </html>
-
-
 
