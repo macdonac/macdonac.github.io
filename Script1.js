@@ -1,42 +1,35 @@
 // JavaScript source code
 
+$(document).ready(function () {
+
+    ko.applyBindings(viewModel);
+    fetchWeather('06790')
+});
 
 
 function fetchWeather(zip) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${zip},us&APPID=f9940e48694b3fdded1e8d7c56ca3c17`)
         .then(response => response.json())
-        .then(data => {
+        .then(data => {            
             weatherParser(data)
         })
 }
 
 function weatherParser(data) {
     console.log(typeof(data))
-    console.log(data.main)
-    console.log(data.main.temp)
+    console.log(data)
 
-    temp = data.main.temp
-
-    bindData(temp)
+    temp = data.main.temp.toString()
+    viewModel.temp(temp);
 }
 
 
-function bindData(temp) {
-    
-}
 
 
-$(document).ready(function () {
-    var viewModel = {
-        temp: ko.observable() // Initially blank
-    };
+var viewModel = {
+    temp: ko.observable() // Initially blank
+};
 
-    viewModel.temp("Hello, world!"); // Text appears
-    ko.applyBindings(viewModel);
 
-    fetchWeather('06790')
-
-    console.log(temp)
-});
 
 
