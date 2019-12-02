@@ -20,14 +20,21 @@ function weatherParser(data) {
     console.log(data)
 
     temp = data.main.temp.toString()
+	city = data.name.toString()
+	desc = data.weather[0].description.toString()
     viewModel.temp(temp);
+	viewModel.city(city);
+	viewModel.desc(desc);
+	
 }
 
 
 
 
 var viewModel = {
-    temp: ko.observable() // Initially blank
+    temp: ko.observable(),
+	city: ko.observable(),
+	desc: ko.observable()
 };
 
 

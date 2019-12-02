@@ -10,7 +10,7 @@
 
 
 </head>
- <body class="text-center">
+ <body class="text-center" data-bind="style: {background: temp() > 40 ? 'red' : 'blue'}">
 
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
@@ -21,19 +21,21 @@
 
       <main role="main" class="inner cover">
         <p class="lead">What's The Weather Like?</p>
-        <p class="lead">
+        <input type=text value="a" id="a"/>
+		<input type=button onclick="fetchWeather(document.getElementById('a').value)" />
+		<p class="lead">
           <a href="#" class="btn btn-lg btn-secondary">Find Out BOIII</a>
         </p>
       </main>
 	  <div class="container">
-		<h2 id="city">Torrington</h2>
+		<h2 id="city"><span data-bind="text: city"></span></h2>
 		<div class="middle">
 		  <i class="fa fa-sun"></i>
 		  <div class="degrees">
-		   <h1 id="temp" <span data-bind="text: temp"></span></h1>
+		   <h1 id="temp"><span data-bind="text: temp"></span></h1>
 		   <span>&#176;</span>
 		  </div>
-		  <h3 id="desc">Sunny</h3>
+		  <h3 id="desc"><span data-bind="text: desc"></span></h3>
 	  </div>
 
       <footer class="mastfoot mt-auto">
