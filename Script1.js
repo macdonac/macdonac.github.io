@@ -5,14 +5,22 @@ $(document).ready(function () {
     ko.applyBindings(viewModel);
     fetchWeather('06790')
 });
+	
+	
+function isValidUsZip(zip) {
+	console.log(/^\d{5}(-\d{4})?$/.test(zip));
+}
+
 
 
 function fetchWeather(zip) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${zip},us&units=imperial&APPID=f9940e48694b3fdded1e8d7c56ca3c17`)
+	if (isValidUsZip(zip) == true) {
+	 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${zip},us&units=imperial&APPID=f9940e48694b3fdded1e8d7c56ca3c17`)
         .then(response => response.json())
         .then(data => {            
             weatherParser(data)
         })
+	}
 }
 
 function weatherParser(data) {
