@@ -20,6 +20,9 @@ function fetchWeather(zip) {
         .then(data => {            
             weatherParser(data)
         })
+		}
+	else {
+		window.alert("Please Enter A Valid Zip Code");
 	}
 }
 
