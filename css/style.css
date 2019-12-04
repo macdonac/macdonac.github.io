@@ -69,3 +69,27 @@ span{
 #temp {
 	font-size: 10rem;
 }
+
+.border {
+    width: 50%;
+    margin: auto;
+    border-color: red;
+    border: 1px;
+    border-radius: 5px;
+    color: red;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px 5px;
+    padding: 5px;
+}
+
+[type=button] {
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+    padding: 4px;
+}
+
+[type=button]:hover {
+        background-color: rgba(0, 0, 0, .6);
+
+}

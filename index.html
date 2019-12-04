@@ -14,28 +14,28 @@
 
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
 
-      <main role="main" class="inner cover">
-		</br>
-		<div class="container">
-			<div> </div>
-			<div class="middle"> 
-			<div> <h2 id="city"><span data-bind="text: city"></span></h2> </div>
-		  <div class="degrees">
-		   <h1 id="temp"><span data-bind="text: temp"></span></h1>
-		   <span>&#176;</span>
-		  </div>
-		  <h3 id="desc"><span data-bind="text: desc"></span></h3>
-		  </br>
-			<input type=text value="00000" id="a"/>
-			<input type=button value="Please enter a zip code" onclick="fetchWeather(document.getElementById('a').value)" />
-		  </div>
-	  </div>
+      <main role="main" class="inner cover">	
+          <div class="container">
+              <div class="border">
+                  <div class="middle">
+                      <div> <h2 id="city"><span data-bind="text: city"></span></h2> </div>
+                      <div class="degrees">
+                          <h1 id="temp"><span data-bind="text: temp"></span></h1>
+                          <span>&#176;</span>
+                      </div>
+                      <h3 id="desc"><span data-bind="text: desc"></span></h3>
+                      </br>
+                      <input type=text onfocus="this.value=''" value="5 digit zip code" id="a" />
+                      <input type=button value="Enter" onclick="fetchWeather(document.getElementById('a').value)" />
+                  </div>
+              </div>
+          </div>
       </main>
 	  
 
       <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>saget ice ©</a>.</p>
+          <p>saget ice ©</a>.</p> 
         </div>
       </footer>
     </div>
