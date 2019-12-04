@@ -8,7 +8,7 @@ $(document).ready(function () {
 	
 	
 function isValidUsZip(zip) {
-	console.log(/^\d{5}(-\d{4})?$/.test(zip));
+	console.log(Number.isInteger(parseInt(zip)));
 }
 
 
