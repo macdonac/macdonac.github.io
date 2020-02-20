@@ -7,11 +7,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="knockout-3.5.1.js"></script>
     <script src="Script1.js"></script>
+	<script src="Chart.js"></script>
+	<script src="Chart_data.js"></script>
+
 
 
 </head>
  <body class="text-center" data-bind="style: {background: temp() > 40 ? 'red' : 'blue'}">
-
+	
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
 
       <main role="main" class="inner cover">	
@@ -28,6 +31,7 @@
                       <input type=text onfocus="this.value=''" value="5 digit zip code" id="a" />
                       <input type=button value="Enter" onclick="fetchWeather(document.getElementById('a').value)" />
                   </div>
+				  <canvas id="myChart" width="400" height="400"></canvas>
               </div>
           </div>
       </main>
